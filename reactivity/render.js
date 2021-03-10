@@ -1,6 +1,7 @@
 import {
   eventFormat,
   stateFormat,
+  bindEvent,
 } from '.';
 
 export function useDom (
@@ -12,6 +13,7 @@ export function useDom (
   DOM
 ) {
   DOM.innerHTML = render(template, state);
+  bindEvent(methods);
 }
 
 export function render (template, state) {

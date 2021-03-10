@@ -6,7 +6,6 @@ export function useReactive (target) {
 }
 
 function ceateReactiveObject(target, baseHandler) {
-  console.log(typeof target === 'object')
   if (!isObject(target)) {
     return target;
   }

@@ -23,7 +23,7 @@ function createSetter () {
   return function set (target, key, value, receiver) {
     const isKeyExist = hasOwnProperty(target, key);
     const oldValue = target[key];
-    const res = Reflect.get(target, key, receiver);
+    const res = Reflect.set(target, key, value, receiver);
 
     if (!isKeyExist) {
       console.log('new a property:' + value)
