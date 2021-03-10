@@ -1,4 +1,4 @@
-import { randomNume } from "../shares/utils";
+import { randomNum } from "../shares/utils";
 
 const reg_onClick = /onClick\=\"(.*?)\"/g;
 
@@ -16,8 +16,8 @@ const reg_onClick = /onClick\=\"(.*?)\"/g;
 const eventPool = [];
 
 export function eventFormat (template) {
-  template = template.replace(reg_onClick, function (node, key) {
-    const _flag = randomNume();
+  return template.replace(reg_onClick, function (node, key) {
+    const _flag = randomNum();
 
     eventPool.push({
       flag: _flag,
@@ -27,6 +27,4 @@ export function eventFormat (template) {
 
     return `data-dom="${_flag}"`;
   });
-
-  console.log('template', template);
 }

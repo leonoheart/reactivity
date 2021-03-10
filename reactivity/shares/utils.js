@@ -10,7 +10,7 @@ function isEqual (newValue, oldValue) {
   return newValue == oldValue;
 }
 
-function randomNume () {
+function randomNum () {
   return new Date().getTime() + parseInt(Math.random() * 10000);
 }
 
@@ -18,5 +18,5 @@ export {
   isObject,
   hasOwnProperty,
   isEqual,
-  randomNume,
+  randomNum,
 };

@@ -14,7 +14,7 @@ function App () {
   }
 
   return {
-    template: `<h1></h1>
+    template: `<h1>{{ count }}</h1>
       <button onClick="add(2)">+</button>
       <button onClick="minus(1)">-</button>
     `,
